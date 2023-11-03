@@ -7,7 +7,7 @@ crontab -l > mycron
 echo "*/15 * * * * /root/monitor-linux/prod-monitor.sh" >> mycron
 crontab mycron
 
-systemctl restart cron && systemctl status cron
+systemctl restart cron
 
 grep CRON /var/log/syslog
 
